@@ -11,6 +11,12 @@ if __name__=='__main__':
   
     llist.head.next = second; 
     second.next = third; 
-  
-    llist.push(fourth)
+
+    # inserting from front
+    llist.push(4)
+    llist.printList()
+    print('*'*30)
+    print(' ')
+
+    # inserting in between
     llist.printList()

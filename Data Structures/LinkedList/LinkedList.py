@@ -7,9 +7,20 @@ class LinkedList:
   def __init__(self):
     self.head = None
 
-  def push(self, new_node):
+  def push(self, data):
+    new_node = Node(data)
     new_node.next = self.head
     self.head = new_node
+
+  def insertBtw(self, prev_node, data):
+    if prev_node is None:
+      print("The given node doesn't exist")
+      return
+    
+    new_node = Node(data)
+    new_node.next = prev_node.next
+    prev_node.next = new_node
+
 
   def printList(self):
     temp = self.head
