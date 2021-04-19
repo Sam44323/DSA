@@ -38,7 +38,32 @@ class LinkedList:
       last = last.next
     
     last.next = new_node
+  
+  # method for deleting a node from the linked list
+  def deleteItem(self, key):
 
+    temp = self.head
+
+    # when the head holds the key itself
+    if temp is not None:
+      if temp.data == key:
+        self.head = temp.next
+        temp = None
+        return
+    
+    # Storing the data of the prev node and the next node
+    while temp is not None:
+      if temp.data == key:
+        break
+      prev = temp
+      temp = temp.next
+
+    if(temp == None):
+      return
+
+    #Unlinking the node from the linked list
+    prev.next = temp.next
+    temp = None
 
   # method for printing the list
 
