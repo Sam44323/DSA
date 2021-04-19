@@ -69,6 +69,40 @@ class LinkedList:
     prev.next = temp.next
     temp = None
 
+  # method for deleting a node based on the key provided for the node
+
+  def deletePosNode(self, pos):
+
+    # if the linked list is empty
+    if(self.head == None):
+      return
+
+    # storing the head node of the linked list
+    temp = self.head
+
+    # for the removal of the head position node
+    if pos == 0:
+      self.head = temp.next
+      temp = None
+      return
+
+    # storing the prev node of the to-be deleted node
+    for i in range(pos - 1):
+      temp = temp.next
+      if temp is None:
+        break
+      
+    # when the postion is more than the number of nodes
+    if temp is None:
+      return
+    if temp.next is None:
+      return
+
+    next = temp.next.next
+
+    # Unlinking the node by connecting the prev and the next node
+    temp.next = next
+
   # method for printing the list
 
   def printList(self):
