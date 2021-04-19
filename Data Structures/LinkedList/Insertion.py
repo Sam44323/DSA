@@ -10,10 +10,11 @@ if __name__=='__main__':
     fourth = Node(4)
   
     llist.head.next = second; 
-    second.next = third; 
+    second.next = third
+    third.next = fourth
 
     # inserting from front
-    llist.push(4)
+    llist.push(5)
     llist.printList()
     print('*'*30)
 
