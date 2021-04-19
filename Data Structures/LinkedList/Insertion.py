@@ -16,7 +16,6 @@ if __name__=='__main__':
     llist.push(4)
     llist.printList()
     print('*'*30)
-    print(' ')
 
     # inserting in between
     llist.insertBtw(second, 8)
