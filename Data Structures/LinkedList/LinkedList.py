@@ -42,26 +42,30 @@ class LinkedList:
   # method for deleting a node from the linked list
   def deleteItem(self, key):
 
-    temp = self.head
+    temp = self.head # storing the head node of the linked list
 
     # when the head holds the key itself
     if temp is not None:
       if temp.data == key:
+        # removing the node from the head
+
         self.head = temp.next
         temp = None
         return
     
-    # Storing the data of the prev node and the next node
+    # Storing the data of the prev node and the current node that will be deleted
     while temp is not None:
       if temp.data == key:
         break
       prev = temp
       temp = temp.next
 
+    # if the key is not present in the linked list
     if(temp == None):
       return
 
-    #Unlinking the node from the linked list
+    # Unlinking the node from the linked list
+
     prev.next = temp.next
     temp = None
 
