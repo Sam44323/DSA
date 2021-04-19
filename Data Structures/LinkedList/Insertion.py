@@ -20,3 +20,8 @@ if __name__=='__main__':
     # inserting in between
     llist.insertBtw(second, 8)
     llist.printList()
+    print('*'*30)
+
+    # inserting at the end
+    llist.insertEnd(9)
+    llist.printList()
