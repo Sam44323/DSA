@@ -1,6 +1,6 @@
 # DSA
 
-**Contains all the code samples for all the important DS and Algos**
+**Contains all the code samples for all the important Data-Strcutures and Algos**
 
 ---
 
