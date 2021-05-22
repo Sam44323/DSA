@@ -26,6 +26,16 @@ class LinkedList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
+    def reverseList(self):
+        prev = None
+        current = self.head
+        while(current is not None):
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
+
     # method for adding a new node at the end
     def insertEnd(self, data):
         new_node = Node(data)
