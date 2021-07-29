@@ -26,6 +26,16 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+    # between insertion
+    def betweenInsertion(self, prev_node: Node, new_data):
+        if prev_node is None:
+            print("The given previous node shouldn't be None")
+            return
+
+        new_data_node = Node(new_data)
+        new_data_node.next = prev_node.next
+        prev_node.next = new_data_node
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
