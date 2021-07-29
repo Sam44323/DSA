@@ -36,6 +36,12 @@ class LinkedList:
         new_data_node.next = prev_node.next
         prev_node.next = new_data_node
 
+    def endInsertion(self, new_data: int):
+        last: Node = self.head
+        while(last.next):
+            last = last.next
+        last.next = Node(new_data)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
