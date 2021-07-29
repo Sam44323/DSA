@@ -21,6 +21,11 @@ class LinkedList:
             print(temp.data)
             temp = temp.next
 
+    # front side pushing
+    def frontpush(self, new_node: Node):
+        new_node.next = self.head
+        self.head = new_node
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
@@ -30,5 +35,3 @@ def createdLinkedList():
     llist.head.next = second
     second.next = third
     return llist
-
-
