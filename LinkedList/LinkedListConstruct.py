@@ -46,7 +46,7 @@ class LinkedList:
     # function for deleting a node from the list
     def deleteNode(self, key: int):
         temp = self.head
-        # if we want to delete the first linked list
+        # if we want to delete the first linked list node
         if(temp.data == key):
             self.head = self.head.next
             return
