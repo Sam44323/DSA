@@ -22,12 +22,12 @@ class LinkedList:
             temp = temp.next
 
     # front side pushing
-    def frontpush(self, new_node: Node):
+    def frontpush(self, new_node):
         new_node.next = self.head
         self.head = new_node
 
     # between insertion
-    def betweenInsertion(self, prev_node: Node, new_data):
+    def betweenInsertion(self, prev_node, new_data):
         if prev_node is None:
             print("The given previous node shouldn't be None")
             return
@@ -37,14 +37,14 @@ class LinkedList:
         prev_node.next = new_data_node
 
     # function for inserting a node at the end
-    def endInsertion(self, new_data: int):
-        last: Node = self.head
+    def endInsertion(self, new_data):
+        last = self.head
         while(last.next):
             last = last.next
         last.next = Node(new_data)
 
     # function for deleting a node from the list
-    def deleteNode(self, key: int):
+    def deleteNode(self, key):
         temp = self.head
         # if we want to delete the first linked list node
         if(temp.data == key):
@@ -59,6 +59,14 @@ class LinkedList:
 
         prev.next = temp.next
         temp = None
+
+    def printLength(self):
+        temp = self.head
+        c = 1
+        while(temp.next):
+            c = c + 1
+            temp = temp.next
+        return c
 
 
 def createdLinkedList():
