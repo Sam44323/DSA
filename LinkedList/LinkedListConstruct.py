@@ -60,6 +60,7 @@ class LinkedList:
         prev.next = temp.next
         temp = None
 
+    # finding the length of a linked-list
     def printLength(self):
         temp = self.head
         c = 1
@@ -67,6 +68,19 @@ class LinkedList:
             c = c + 1
             temp = temp.next
         return c
+
+    # iterative search for a node in linked-list
+    def iterativeSearch(self, search_node):
+        if(self.head.data == search_node.data):
+            return 0
+        temp = self.head
+        c = 1
+        while(temp):
+            if(temp.data == search_node.data):
+                return c
+            temp = temp.next
+            c += 1
+        return -1
 
 
 def createdLinkedList():
