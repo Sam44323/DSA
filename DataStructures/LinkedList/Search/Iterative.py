@@ -1,4 +1,4 @@
-from LinkedList.LinkedListConstruct import Node, createdLinkedList
+from DataStructures.LinkedList.LinkedListConstruct import Node, createdLinkedList
 
 list = createdLinkedList()
 data = list.iterativeSearch(Node(3))

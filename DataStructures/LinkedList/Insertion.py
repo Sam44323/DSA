@@ -1,4 +1,4 @@
-from LinkedListConstruct import Node, createdLinkedList, LinkedList
+from DataStructures.LinkedList.LinkedListConstruct import Node, createdLinkedList, LinkedList
 
 # front-side insertion to linked list
 
