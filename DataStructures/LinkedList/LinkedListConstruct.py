@@ -92,6 +92,17 @@ class LinkedList:
 
         return self.recursiveSearch(list.next, value)
 
+    # n-th node searcher
+    def searchNthNode(self, value):
+        c = 0
+        temp = self.head
+        while(temp):
+            if(temp.data == value):
+                return c
+            temp = temp.next
+            c += 1
+        return -1
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
