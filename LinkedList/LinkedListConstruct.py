@@ -82,6 +82,15 @@ class LinkedList:
             c += 1
         return -1
 
+    def recursiveSearch(self, list, value):
+        if(not list):
+            return -1
+
+        if (list.data == value):
+            return True
+
+        return self.recursiveSearch(list.next, value)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
