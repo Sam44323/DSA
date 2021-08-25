@@ -82,6 +82,7 @@ class LinkedList:
             c += 1
         return -1
 
+    # recursive search for a node in linked-list
     def recursiveSearch(self, list, value):
         if(not list):
             return -1
