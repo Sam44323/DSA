@@ -1,4 +1,4 @@
-from DataStructures.LinkedList.LinkedListConstruct import createdLinkedList
+from Datastructures.LinkedList.LinkedListConstruct import createdLinkedList
 
 list = createdLinkedList()
 data = list.searchNthNode(3)
