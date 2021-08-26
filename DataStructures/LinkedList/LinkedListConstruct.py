@@ -119,6 +119,19 @@ class LinkedList:
             temp = temp.next
         return temp.data
 
+    # pointer methods for linkedlist traversal
+    def pointerMethodTraversal(self):
+        # Initialize two pointers, one will go one step a time (slow), another twice's at a time (fast)
+        slow = self.head
+        fast = self.head
+
+        # Iterating till fast next is null valued
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        return slow.data
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
