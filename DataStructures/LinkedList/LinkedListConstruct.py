@@ -113,12 +113,11 @@ class LinkedList:
             lFirst += 1
             temp = temp.next
         # now traversing the linked list to the half the length of lFirst
-        print(lFirst)
         temp = self.head
         while lNext < int(lFirst/2):
             lNext += 1
             temp = temp.next
-        print(temp.data)
+        return temp.data
 
 
 def createdLinkedList():
