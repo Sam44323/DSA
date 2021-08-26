@@ -1,4 +1,4 @@
-from DataStructures.LinkedList.LinkedListConstruct import Node, createdLinkedList
+from LinkedList.LinkedListConstruct import Node, createdLinkedList
 
 linkedList = createdLinkedList()
 data = linkedList.recursiveSearch(linkedList.head, 3)

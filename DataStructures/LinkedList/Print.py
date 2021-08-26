@@ -1,4 +1,4 @@
-from DataStructures.LinkedList.LinkedListConstruct import LinkedList, Node, createdLinkedList
+from Datastructures.LinkedList.LinkedListConstruct import createdLinkedList
 
 list = createdLinkedList()
 list.printList()

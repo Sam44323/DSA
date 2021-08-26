@@ -82,7 +82,6 @@ class LinkedList:
             c += 1
         return -1
 
-    # recursive search for a node in linked-list
     def recursiveSearch(self, list, value):
         if(not list):
             return -1
@@ -91,17 +90,6 @@ class LinkedList:
             return True
 
         return self.recursiveSearch(list.next, value)
-
-    # n-th node searcher
-    def searchNthNode(self, value):
-        c = 0
-        temp = self.head
-        while(temp):
-            if(temp.data == value):
-                return c
-            temp = temp.next
-            c += 1
-        return -1
 
 
 def createdLinkedList():
