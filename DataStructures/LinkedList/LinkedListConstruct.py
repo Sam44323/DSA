@@ -103,12 +103,33 @@ class LinkedList:
             c += 1
         return -1
 
+    # single traversal middle node finder
+    def singleTraversalFinder(self):
+        # first finding the length for the linkedlist
+        lFirst = 0
+        lNext = 0
+        temp = self.head
+        while temp is not None:
+            lFirst += 1
+            temp = temp.next
+        # now traversing the linked list to the half the length of lFirst
+        print(lFirst)
+        temp = self.head
+        while lNext < int(lFirst/2):
+            lNext += 1
+            temp = temp.next
+        print(temp.data)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
     llist.head = Node(1)
     second = Node(2)
     third = Node(3)
+    fourth = Node(4)
+    fifth = Node(5)
     llist.head.next = second
     second.next = third
+    third.next = fourth
+    fourth.next = fifth
     return llist
