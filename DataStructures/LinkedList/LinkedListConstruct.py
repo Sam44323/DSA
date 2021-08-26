@@ -121,7 +121,7 @@ class LinkedList:
 
     # pointer methods for linkedlist traversal
     def pointerMethodTraversal(self):
-        # Initialize two pointers, one will go one step a time (slow), another twice's at a time (fast)
+        # Initialize two pointers, one will go one step a time(slow), another twice's at a time(fast)
         slow = self.head
         fast = self.head
 
