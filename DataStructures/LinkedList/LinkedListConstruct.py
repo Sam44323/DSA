@@ -153,6 +153,17 @@ class LinkedList:
             temp = temp.next
         return "This ain't a looped linked list"
 
+    # checking for loop in a linkedlist using floyd-cycle-algorithm
+    def floydCycleAlgorithmLoop(self):
+        slow = self.head
+        fast = self.head
+        while fast and fast.next and slow:
+            slow = slow.next
+            fast = fast.next.next
+            if(slow == fast):
+                return "This linked list has a loop"
+        return "This is not a looped linked list"
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
