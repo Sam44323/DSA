@@ -142,6 +142,17 @@ class LinkedList:
             temp = temp.next
         return c
 
+    # checking for loop in a linkedlist using hashing
+    def hashingCheckLoop(self):
+        temp = self.head
+        values = set()
+        while temp:
+            if(temp.data in values):
+                return "This is a looped linked list"
+            values.add(temp.data)
+            temp = temp.next
+        return "This ain't a looped linked list"
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
