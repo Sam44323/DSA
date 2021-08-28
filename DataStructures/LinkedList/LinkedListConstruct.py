@@ -164,6 +164,18 @@ class LinkedList:
                 return "This linked list has a loop"
         return "This is not a looped linked list"
 
+    # checking for loop in a linkedlist using list data updation
+    def listDataUpdationLoopFinder(self):
+        if(self.head is None):
+            return "This is en empty list"
+        self = self.head
+        while self:
+            if(self.data == -1):
+                return "This is a loop"
+            self.data = -1
+            self = self.next
+        return "This is not a loop"
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
