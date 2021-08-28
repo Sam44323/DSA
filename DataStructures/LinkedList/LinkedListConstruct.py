@@ -132,12 +132,22 @@ class LinkedList:
 
         return slow.data
 
+    # counting how many times a particular is present in the list
+    def countOccurrence(self, value):
+        temp = self.head
+        c = 0
+        while temp:
+            if temp.data == value:
+                c += 1
+            temp = temp.next
+        return c
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
     llist.head = Node(1)
-    second = Node(2)
-    third = Node(3)
+    second = Node(1)
+    third = Node(1)
     fourth = Node(4)
     fifth = Node(5)
     llist.head.next = second
