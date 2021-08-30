@@ -176,6 +176,24 @@ class LinkedList:
             self = self.next
         return "This is not a loop"
 
+    # palindrome check using list
+    def listPopperPalindrome(self):
+        values = list()
+        fCount = 0
+        sCount = 0
+        temp = self.head
+        while temp:
+            values.append(temp.data)
+            fCount += 1
+            temp = temp.next
+        temp = self.head
+        while temp:
+            if(values):
+                if(temp.data == values.pop()):
+                    sCount += 1
+            temp = temp.next
+        return fCount == sCount
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
