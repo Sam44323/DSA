@@ -209,6 +209,7 @@ class LinkedList:
     def recursionRemoveDuplicates(self):
         if(self.head is None):
             return
+        # creating a function for recursion
 
         def mainFunction(value):
             if(value.next is not None):
@@ -225,8 +226,8 @@ def createdLinkedList():
     llist.head = Node(1)
     second = Node(2)
     third = Node(3)
-    fourth = Node(3)
-    fifth = Node(3)
+    fourth = Node(4)
+    fifth = Node(5)
     llist.head.next = second
     second.next = third
     third.next = fourth
