@@ -205,14 +205,28 @@ class LinkedList:
             else:
                 self = self.next  # we'll be moving to the next node only when we are sure there is not duplicates for the current node value
 
+    # remove duplicates using recursion
+    def recursionRemoveDuplicates(self):
+        if(self.head is None):
+            return
+
+        def mainFunction(value):
+            if(value.next is not None):
+                if (value.data == value.next.data):
+                    value.next = value.next.next
+                    mainFunction(value)
+                else:
+                    mainFunction(value.next)
+        mainFunction(self.head)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
     llist.head = Node(1)
     second = Node(2)
     third = Node(3)
-    fourth = Node(4)
-    fifth = Node(5)
+    fourth = Node(3)
+    fifth = Node(3)
     llist.head.next = second
     second.next = third
     third.next = fourth
