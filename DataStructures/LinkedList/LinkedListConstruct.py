@@ -209,8 +209,8 @@ class LinkedList:
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
     llist.head = Node(1)
-    second = Node(1)
-    third = Node(1)
+    second = Node(2)
+    third = Node(3)
     fourth = Node(4)
     fifth = Node(5)
     llist.head.next = second
