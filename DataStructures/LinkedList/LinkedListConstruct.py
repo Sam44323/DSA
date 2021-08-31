@@ -194,12 +194,23 @@ class LinkedList:
             temp = temp.next
         return fCount == sCount
 
+    # remove duplicates using traversal
+    def traversalRemoveDuplicates(self):
+        self = self.head
+        if self is None:
+            return
+        while self and self.next is not None:
+            if(self.data == self.next.data):
+                self.next = self.next.next
+            else:
+                self = self.next  # we'll be moving to the next node only when we are sure there is not duplicates for the current node value
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
     llist.head = Node(1)
-    second = Node(2)
-    third = Node(3)
+    second = Node(1)
+    third = Node(1)
     fourth = Node(4)
     fifth = Node(5)
     llist.head.next = second
