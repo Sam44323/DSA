@@ -220,6 +220,50 @@ class LinkedList:
                     mainFunction(value.next)
         mainFunction(self.head)
 
+    # swapping nodes x and y in the linked list by chaning the links
+    def swappNodesByLinks(self, x, y):
+
+        # if x and y are same
+        if x == y:
+            return
+
+        # search for x and y(storing the track for prev node and the current node)
+        prevX = None
+        currX = self.head
+        prevY = None
+        currY = self.head
+
+        while currX != None and currX.data != x:
+            prevX = currX
+            currX = currX.next
+
+        while currY != None and currY.data != y:
+            prevY = currY
+            currY = currY.next
+
+        # if either x, y or none of them are present in the linked list
+        if currX == None or currY == None:
+            return
+
+        # if x is not the head
+        if prevX != None:
+            prevX.next = currY
+        else:
+            # else make y the head
+            self.head = currY
+
+        # if y is not the head
+        if prevY != None:
+            prevY.next = currX
+        else:
+            # else make x the head
+            self.head = currX
+
+        # swapping the next pointers
+        temp = currX.next
+        currX.next = currY.next
+        currY.next = temp
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
