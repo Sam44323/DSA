@@ -221,7 +221,7 @@ class LinkedList:
         mainFunction(self.head)
 
     # swapping nodes x and y in the linked list by chaning the links
-    def swappNodesByLinks(self, x, y):
+    def swapNodesByLinks(self, x, y):
 
         # if x and y are same
         if x == y:
