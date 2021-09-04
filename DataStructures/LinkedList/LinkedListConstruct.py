@@ -261,7 +261,7 @@ class LinkedList:
             # else make x the head
             self.head = currX
 
-        # swapping the next pointers
+        # swapping the next pointer
         temp = currX.next
         currX.next = currY.next
         currY.next = temp
