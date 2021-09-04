@@ -227,9 +227,9 @@ class LinkedList:
         if x == y:
             return
 
-        # search for x (storing the track for prev node and the current node)
         prevX = None
         currX = self.head
+        # search for x (storing the track for prev node and the current node)
 
         while currX != None and currX.data != x:
             prevX = currX
