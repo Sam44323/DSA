@@ -227,15 +227,17 @@ class LinkedList:
         if x == y:
             return
 
-        # search for x and y(storing the track for prev node and the current node)
+        # search for x (storing the track for prev node and the current node)
         prevX = None
         currX = self.head
-        prevY = None
-        currY = self.head
 
         while currX != None and currX.data != x:
             prevX = currX
             currX = currX.next
+
+        prevY = None
+        currY = self.head
+        # search for y(storing the track for prev node and the current node)
 
         while currY != None and currY.data != y:
             prevY = currY
