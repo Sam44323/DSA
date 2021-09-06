@@ -300,13 +300,16 @@ class LinkedList:
         temp = self.head
         secondLast = None
 
+        # if the linked list has only one node
         if temp is None or temp.next is None:
             return
 
+        # traversing the list to store the second last node and last node
         while temp and temp.next:
             secondLast = temp
             temp = temp.next
 
+        # shifting the last node to the front
         secondLast.next = None
         temp.next = self.head
         self.head = temp
