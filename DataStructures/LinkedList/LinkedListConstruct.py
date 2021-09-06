@@ -266,6 +266,20 @@ class LinkedList:
         currX.next = currY.next
         currY.next = temp
 
+    # pair swapping standard method
+    def pairwiseSwappingStandard(self):
+        temp = self.head
+        if temp is None:
+            return
+
+        # start swapping only if list has more than two nodes
+        while temp and temp.next:
+            # when both the current and next nodes are different
+            if temp.data != temp.next.data:
+                temp.data, temp.next.data = temp.next.data, temp.data
+
+            temp = temp.next.next
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
