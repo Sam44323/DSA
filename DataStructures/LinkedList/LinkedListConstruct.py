@@ -280,6 +280,22 @@ class LinkedList:
 
             temp = temp.next.next
 
+    # pair swapping recursive method
+    def pairwiseSwappingRecursive(self):
+        temp = self.head
+        if temp is None:
+            return
+
+        def recursiveFunction(node):
+            if node.next is None or node.next.next is None:
+                return
+            if node.data != node.next.data:
+                node.data, node.next.data = node.next.data, node.data
+
+            recursiveFunction(node.next.next)
+
+        recursiveFunction(temp)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
