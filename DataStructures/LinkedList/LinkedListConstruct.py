@@ -296,6 +296,21 @@ class LinkedList:
 
         recursiveFunction(temp)
 
+    def firstLastTransfer(self):
+        temp = self.head
+        secondLast = None
+
+        if temp is None or temp.next is None:
+            return
+
+        while temp and temp.next:
+            secondLast = temp
+            temp = temp.next
+
+        secondLast.next = None
+        temp.next = self.head
+        self.head = temp
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
