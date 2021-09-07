@@ -1,5 +1,9 @@
 # Node Class
 
+
+from typing import Any
+
+
 class Node:
 
     # initializing the node object
@@ -327,3 +331,25 @@ def createdLinkedList():
     third.next = fourth
     fourth.next = fifth
     return llist
+
+# traversal common list intersection checker
+
+
+def commonListIntersectionTraversal(a: LinkedList or Any, b: LinkedList or Any):
+    temp = Node(0)
+    (a, b) = (a.head, b.head)
+    if a == None or b == None:
+        return
+
+    while a != None and b != None:
+        if (a.data == b.data):
+            temp.next = Node(a.data)
+            a = a.next
+            b = b.next
+
+        elif (a.data < b.data):
+            a = a.next
+        else:
+            b = b.next
+
+    return temp
