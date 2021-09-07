@@ -336,14 +336,19 @@ def createdLinkedList():
 
 
 def commonListIntersectionTraversal(a: LinkedList or Any, b: LinkedList or Any):
-    temp = Node(0)
+    temp = LinkedList()
+    list = temp
+    temp.head = Node(None)
+    temp = temp.head
     (a, b) = (a.head, b.head)
+
     if a == None or b == None:
         return
 
     while a != None and b != None:
         if (a.data == b.data):
             temp.next = Node(a.data)
+            temp = temp.next
             a = a.next
             b = b.next
 
@@ -351,5 +356,5 @@ def commonListIntersectionTraversal(a: LinkedList or Any, b: LinkedList or Any):
             a = a.next
         else:
             b = b.next
-
+    print(list.printList())
     return temp
