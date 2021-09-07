@@ -18,3 +18,8 @@ listSecond.head.next = second
 second.next = third
 list = commonListIntersectionTraversal(
     listFirst, listSecond)
+
+list = list.head.next
+while list != None:
+    print(list.data)
+    list = list.next
