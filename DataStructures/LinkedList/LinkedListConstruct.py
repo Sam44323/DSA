@@ -401,3 +401,20 @@ def intersectionPointNodeCountDifferenceMethod(a: LinkedList, b: LinkedList):
     else:
         data = traverseListMethodAndFind(b.head, a.head, d)
     print(data)
+
+
+def intersectionFinderUsingHashing(a: LinkedList, b: LinkedList):
+    dataSet = set()
+    temp = a.head
+    while temp != None:
+        dataSet.add(temp.data)
+        temp = temp.next
+
+    temp = b.head
+    while temp != None:
+        if temp.data in dataSet:
+            return temp.data
+
+        temp = temp.next
+
+    return 'No intersection found'
