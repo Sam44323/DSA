@@ -358,6 +358,8 @@ def commonListIntersectionTraversal(a: LinkedList or Any, b: LinkedList or Any):
             b = b.next
     return new_list
 
+# looping method for finding the intersection point for two linked-list
+
 
 def intersectionPointLoopMethod(a: LinkedList, b: LinkedList):
     tempFirst = a.head
@@ -371,3 +373,31 @@ def intersectionPointLoopMethod(a: LinkedList, b: LinkedList):
             tempSecond = tempSecond.next
         tempFirst = tempFirst.next
     return 'No intersection found'
+
+# node count difference method for finding the intersection point for two linked-list
+
+
+def intersectionPointNodeCountDifferenceMethod(a: LinkedList, b: LinkedList):
+    # finding the difference between the length of lists
+    d = abs(a.printLength() - b.printLength())
+
+    def traverseListMethodAndFind(longer: LinkedList, shorter: LinkedList, limit: int):
+        c = 1
+        while c <= limit:
+            longer = longer.next
+            c += 1
+
+        c = 0
+        while longer != None and shorter != None:
+            if (longer.data == shorter.data):
+                return longer.data
+            longer = longer.next
+            shorter = shorter.next
+        return 'No intersection found'
+
+    # traversing the bigger list till d point and finding the intersection point
+    if a.printLength() > b.printLength():
+        data = traverseListMethodAndFind(a.head, b.head,  d)
+    else:
+        data = traverseListMethodAndFind(b.head, a.head, d)
+    print(data)

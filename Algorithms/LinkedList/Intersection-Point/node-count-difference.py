@@ -1,4 +1,4 @@
-from Datastructures.LinkedList.LinkedListConstruct import LinkedList, Node, intersectionPointLoopMethod
+from Datastructures.LinkedList.LinkedListConstruct import LinkedList, Node, intersectionPointNodeCountDifferenceMethod
 
 common = Node(8)
 
@@ -12,3 +12,4 @@ listSecond = LinkedList()
 listSecond.head = Node(10)
 listSecond.head.next = common
 listSecond.head.next.next = Node(100)
+intersectionPointNodeCountDifferenceMethod(listFirst, listSecond)
