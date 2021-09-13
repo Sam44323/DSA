@@ -357,3 +357,17 @@ def commonListIntersectionTraversal(a: LinkedList or Any, b: LinkedList or Any):
         else:
             b = b.next
     return new_list
+
+
+def intersectionPointLoopMethod(a: LinkedList, b: LinkedList):
+    tempFirst = a.head
+    c = 0
+    while tempFirst != None:
+        tempSecond = b.head
+        while tempSecond != None:
+            if(tempFirst.data == tempSecond.data):
+                c = tempFirst.data
+                return c
+            tempSecond = tempSecond.next
+        tempFirst = tempFirst.next
+    return 'No intersection found'

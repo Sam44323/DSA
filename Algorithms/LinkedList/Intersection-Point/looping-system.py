@@ -1,14 +1,16 @@
-from Datastructures.LinkedList.LinkedListConstruct import LinkedList, Node
+from Datastructures.LinkedList.LinkedListConstruct import LinkedList, Node, intersectionPointLoopMethod
 
-common = Node(6)
+common = Node(8)
 
 listFirst = LinkedList()  # creating an empty list
 listFirst.head = Node(3)
-listFirst.next = Node(6)
-listFirst.next.next = Node(9)
-listFirst.next.next.next = common
-listFirst.next.next.next.next = Node(30)
-
-listSecond = Node(10)
-listSecond.next = common
-listSecond.next.next = Node(30)
+listFirst.head.next = Node(6)
+listFirst.head.next.next = Node(9)
+listFirst.head.next.next.next = common
+listFirst.head.next.next.next.next = Node(30)
+listSecond = LinkedList()
+listSecond.head = Node(10)
+listSecond.head.next = common
+listSecond.head.next.next = Node(100)
+data = intersectionPointLoopMethod(listFirst, listSecond)
+print(data)
