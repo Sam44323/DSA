@@ -2,7 +2,7 @@ from Datastructures.LinkedList.LinkedListConstruct import LinkedList, Node, inte
 
 common = Node(8)
 
-listFirst = LinkedList()  # creating an empty list
+listFirst = LinkedList()
 listFirst.head = Node(3)
 listFirst.head.next = Node(6)
 listFirst.head.next.next = Node(9)
