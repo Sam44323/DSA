@@ -327,7 +327,7 @@ class LinkedList:
             pivot = temp
             temp = temp.next
 
-        print(pivot.data)
+        return
 
 
 def createdLinkedList():
