@@ -321,12 +321,13 @@ class LinkedList:
     # function for sorting a linked list using quick sort mechanism
     def quickSortLinkedList(self):
         temp = self.head
-        lastNode = None
+        pivot = None
+        # getting the first pivot for the list
         while temp != None:
-            lastNode = temp
+            pivot = temp
             temp = temp.next
 
-        print(lastNode.data)
+        print(pivot.data)
 
 
 def createdLinkedList():
