@@ -319,15 +319,10 @@ class LinkedList:
         self.head = temp
 
     # function for sorting a linked list using quick sort mechanism
-    def quickSortLinkedList(self):
-        temp = self.head
-        pivot = None
-        # getting the first pivot for the list
-        while temp != None:
-            pivot = temp
-            temp = temp.next
-
-        return
+    def quickSortLinkedList(self, end: LinkedList):
+        start = self.head
+        if(start == None or start == end or start == end.next):
+            return
 
 
 def createdLinkedList():
