@@ -318,6 +318,16 @@ class LinkedList:
         temp.next = self.head
         self.head = temp
 
+    # function for sorting a linked list using quick sort mechanism
+    def quickSortLinkedList(self):
+        temp = self.head
+        lastNode = None
+        while temp != None:
+            lastNode = temp
+            temp = temp.next
+
+        print(lastNode.data)
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
