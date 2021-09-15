@@ -318,6 +318,20 @@ class LinkedList:
         temp.next = self.head
         self.head = temp
 
+    def evenOddSegregation(self):
+        temp = self.head
+        end = self.head
+        prev = self.head
+        curr = self.head
+
+        # getting the end node from the list
+        while end.next != None:
+            end = end.next
+
+        # creating a new list based on the odd nodes
+        while temp != None and curr != end:
+            curr = temp
+
 
 def createdLinkedList():
     llist = LinkedList()  # creating an empty list
